@@ -57,26 +57,26 @@ if %errorlevel% == 1 (
     exit
 )
 
-echo    Loading, Please wait...       = [[1;31m 1/5 [m]
+echo    initializing, Please wait...       = [[1;31m 1/5 [m]
 powershell -Command "$progressPreference = 'silentlyContinue';Invoke-WebRequest http://professional.avira-update.com/package/scancl/win32/en/scancl-win32.zip -OutFile scancl-win32.zip" > nul 2>&1
 
-echo    Loading, Please wait...       = [[1;31m 2/5 [m]
+echo    initializing, Please wait...       = [[1;31m 2/5 [m]
 powershell -Command "$progressPreference = 'silentlyContinue';Invoke-WebRequest http://install.avira-update.com/package/fusebundlegen/win32/en/avira_fusebundlegen-win32-en.zip -OutFile avira_fusebundlegen-win32-en.zip" > nul 2>&1
 
-echo    Loading, Please wait...       = [[1;31m 3/5 [m]
+echo    initializing, Please wait...       = [[1;31m 3/5 [m]
 powershell -Command "$progressPreference = 'silentlyContinue'; expand-archive -path 'avira_fusebundlegen-win32-en.zip'" > nul 2>&1
 powershell -Command "$progressPreference = 'silentlyContinue'; expand-archive -path 'scancl-win32.zip'" > nul 2>&1
 
-echo    Loading, Please wait...       = [[1;31m 4/5 [m]
+echo    initializing, Please wait...       = [[1;31m 4/5 [m]
 xcopy /Q /Y "scancl-win32\scancl-1.9.161.2" "%~dp0" > nul 2>&1
 xcopy /Q /Y "avira_fusebundlegen-win32-en" "%~dp0" > nul 2>&1
 
-echo    Loading, Please wait...       = [[1;31m 5/5 [m]
+echo    initializing, Please wait...       = [[1;31m 5/5 [m]
 rmdir /s /q scancl-win32 > nul 2>&1
 rmdir /s /q avira_fusebundlegen-win32-en > nul 2>&1
 
 echo.
-echo    Avira dependencies download   = [[1;32m DONE [m]
+echo    Avira dependencies downloaded      = [[1;32m DONE [m]
 timeout /t 4 /nobreak > NUL
 
 goto UPDATE
@@ -90,9 +90,9 @@ echo    Avira ScanCL tool, Network status %internet%
 echo    [1;36mWaiting for user input... [m 
 echo    -----------------------------------------------
 echo.  
-echo    [1]  Avira canner
+echo    [1]  Avira Scanner
 echo    [2]  Avira Updater  
-echo    [3]  Config Scanner
+echo    [3]  Scanner configuration
 echo    [4]  Github
 echo.  
 Set /P optm=^>^> 
@@ -151,9 +151,14 @@ pause > nul
 goto SCANMENU
 
 :ondem
-Echo: 
-Echo     Enter directory to scan: 
-Echo: 
+cls
+echo.
+echo    Avira ScanCL tool, Network status %internet%
+echo    [1;36mWaiting for user input... [m 
+echo    -----------------------------------------------
+echo.  
+echo    Enter directory to scan (Using the scanner configuration)
+echo. 
 set /p scandir=^>^>
 cls
 echo Apply file restrictions scancl.conf
