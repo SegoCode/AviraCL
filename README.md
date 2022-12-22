@@ -15,6 +15,7 @@ This batch tool allows you to scan and delete malware from your computer using t
 Things to keep in mind: 
 
 - Works better with internet
+- Need a avira license file
 
 ```shell
 git clone https://github.com/SegoCode/AviraCL
