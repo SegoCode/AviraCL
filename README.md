@@ -18,8 +18,8 @@ Things to keep in mind:
 
 ```shell
 git clone https://github.com/SegoCode/AviraCL
-cd AviraCL.bat
-Deblo.bat
+cd AviraCL
+AviraCL.bat
 ```
 Or [donwload a zip](https://github.com/SegoCode/AviraCL/archive/refs/heads/main.zip).
 
