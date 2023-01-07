@@ -1,5 +1,5 @@
 # AviraCL
-<img  src="https://github.com/SegoCode/AviraCL/blob/main/media/demo.gif">
+<img  src="https://github.com/SegoCode/AviraCL/blob/main/media/demo-2.gif">
 
 This tool lets you scan for malware on your computer or in a specific folder using Avira's antivirus engine. It also has an updater for the malware database. Usually, you need to have Avira antivirus installed to run the command line antivirus, but you can use the script without installing Avira antivirus.
 
