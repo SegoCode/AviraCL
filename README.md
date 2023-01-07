@@ -1,9 +1,9 @@
 # AviraCL
 <img  src="https://github.com/SegoCode/AviraCL/blob/main/media/demo.gif">
 
-This batch tool allows you to scan and delete malware from your computer using the powerful Avira core antivirus engine. Also includes an updater to ensure that you are always using the latest malware database. To run the command line antivirus, you typically need to have Avira antivirus installed... However, you do not need to install Avira antivirus to use the script.
+This tool lets you scan for malware on your computer or in a specific folder using Avira's antivirus engine. It also has an updater for the malware database. Usually, you need to have Avira antivirus installed to run the command line antivirus, but you can use the script without installing Avira antivirus.
 
-This tool is based on a previous project that I removed from GitHub because it was approached differently. But this version is improved and I hope you find it useful. 
+_Is based on a previous project that I removed from GitHub because it was approached differently. But this version is improved and I hope you find it useful._ 
 
 ## Features
 - Portable.
