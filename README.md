@@ -10,6 +10,7 @@ _Is based on a previous project that I removed from GitHub because it was approa
 - Custom Scan to select specific folders or files to scan
 - Configuration settings such as file types to scan 
 - Malware database updates
+- All downloads are directly from the official Avira repository
 
 ## Usage & info
 
